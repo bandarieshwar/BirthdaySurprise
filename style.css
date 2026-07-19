@@ -1,0 +1,344 @@
+.hearts span{
+
+position:fixed;
+
+top:-50px;
+
+font-size:35px;
+
+z-index:0;
+
+opacity:0.8;
+
+animation: fallingHearts 8s linear infinite;
+
+}
+
+
+/* Different positions */
+
+.hearts span:nth-child(1){
+
+left:10%;
+
+animation-duration:7s;
+
+}
+
+
+.hearts span:nth-child(2){
+
+left:20%;
+
+font-size:45px;
+
+animation-duration:10s;
+
+}
+
+
+.hearts span:nth-child(3){
+
+left:35%;
+
+animation-duration:8s;
+
+}
+
+
+.hearts span:nth-child(4){
+
+left:50%;
+
+font-size:30px;
+
+animation-duration:6s;
+
+}
+
+
+.hearts span:nth-child(5){
+
+left:65%;
+
+animation-duration:9s;
+
+}
+
+
+.hearts span:nth-child(6){
+
+left:75%;
+
+font-size:50px;
+
+animation-duration:12s;
+
+}
+
+
+.hearts span:nth-child(7){
+
+left:85%;
+
+animation-duration:7s;
+
+}
+
+
+.hearts span:nth-child(8){
+
+left:95%;
+
+animation-duration:11s;
+
+}
+
+
+
+/* Top to Bottom Animation */
+
+@keyframes fallingHearts{
+
+
+0%{
+
+transform:translateY(-100px) rotate(0deg);
+
+opacity:0;
+
+}
+
+
+10%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(110vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+
+}
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+body {
+    text-align: center;
+}
+
+button {
+
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    color: white;
+
+    font-size: 24px;        /* Increase text size */
+    font-family: 'Poppins', sans-serif;
+
+    padding: 10px 20px;     /* Increase button height and width */
+
+    border: none;
+    border-radius: 50px;    /* Rounded button shape */
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(255, 20, 147, 0.5);
+
+    transition: 0.3s ease;
+margin: 30px auto;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero button {
+    display: inline-block;
+}
+
+
+/* When you move mouse over button */
+button:hover {
+
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+
+}
+
+/* Main Heading */
+.hero h1 {
+font-size: 40px;
+    color: #ff1493;       
+    text-align: center;   
+    font-family: Bradley Hand, cursive;
+}
+
+
+
+/* Birthday Message Paragraph */
+.hero p {
+    color: indigo;       /* Text color */
+    text-align: center;   /* Center alignment */
+    font-size: 20px;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+
+}
+.gallery {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+
+}
+
+
+/* Initial photo state (hidden) */
+
+.gallery img {
+
+    width: 500px;
+    height: auto;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: translateY(50px);
+
+    transition: opacity 1.5s ease, transform 1.5s ease;
+
+}
+
+
+/* When photo appears */
+
+.gallery img.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+/* Memory Section Heading */
+.message h2 {
+    color: #ff1493;
+    text-align: center;
+}
+
+
+/* Memory Section Paragraph */
+.message p {
+    color: indigo;
+    text-align: center;
+font-size: 18px;
+}
+.surprise {
+
+    text-align: center;
+    padding: 80px 20px;
+
+}
+
+
+.surprise button {
+
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+
+    color: white;
+
+    font-size: 24px;
+
+    padding: 20px 60px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(255,20,147,0.5);
+
+}
+
+
+.surprise button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* Hidden Message */
+
+#surpriseMessage {
+
+    display: none;
+
+    margin-top: 50px;
+
+    animation: fadeIn 2s ease;
+
+}
+
+
+#surpriseMessage h2 {
+
+    font-family: 'Dancing Script', cursive;
+
+    color: #ff1493;
+
+    font-size: 45px;
+
+}
+
+
+#surpriseMessage p {
+
+    color: white;
+
+    font-size: 22px;
+
+    line-height: 2;
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+/* Message Animation */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+}
